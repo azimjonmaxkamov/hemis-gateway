@@ -1,0 +1,27 @@
+<!doctype html>
+<!-- SPDX-License-Identifier: Apache-2.0 · Copyright (c) 2026 Azimjon Makhkamov -->
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HEMIS API Docs — Kirish</title>
+<link rel="stylesheet" href="/static/admin.css">
+</head>
+<body>
+<div class="login-wrap">
+  <form class="card login" id="f">
+    <div class="brand"><span id="blogo"><div class="logo">API</div></span><div>HEMIS API hujjatlari<small id="bname"></small></div></div>
+    <p class="small muted" style="margin-top:0">Administrator bergan docs login va parolingizni kiriting. Sizga faqat ruxsat berilgan endpointlar ko'rsatiladi.</p>
+    <label class="f"><span>Login</span><input name="username" autocomplete="username" required autofocus></label>
+    <label class="f"><span>Parol</span><input name="password" type="password" autocomplete="current-password" required></label>
+    <div id="capf" style="display:none"><label class="f"><span>Rasmdagi belgilar</span><div class="row"><img id="capimg" alt="captcha" style="border-radius:6px;border:1px solid var(--border)"><button type="button" class="sm" id="capnew">↻</button></div><input name="captcha" autocomplete="off" maxlength="8" style="margin-top:6px"></label><input type="hidden" name="captcha_id"></div>
+    <div id="err" class="alert bad" style="display:none"></div>
+    <button class="primary" style="width:100%;justify-content:center">Kirish</button>
+    <p class="muted small" style="margin:14px 0 0">Login yo'qmi? OTM axborot texnologiyalari bo'limiga murojaat qiling.</p>
+    <div class="foot" id="pfoot"></div>
+  </form>
+</div>
+<script src="/static/docs-login.js"></script>
+<script src="/static/brand.js"></script>
+</body>
+</html>

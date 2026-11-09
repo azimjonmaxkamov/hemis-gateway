@@ -1,0 +1,29 @@
+<!doctype html>
+<!-- SPDX-License-Identifier: Apache-2.0 · Copyright (c) 2026 Azimjon Makhkamov -->
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HEMIS API Docs</title>
+<link rel="stylesheet" href="/static/swagger/swagger-ui.css">
+<link rel="stylesheet" href="/static/docs.css">
+</head>
+<body>
+<header class="hg-top">
+  <div class="hg-brand"><span class="hg-logo">API</span><span><span id="bshort">HEMIS</span> API<small id="who"></small></span></div>
+  <div class="hg-actions"><span id="kp" class="hg-kp"></span><button id="logout" type="button">Chiqish</button></div>
+</header>
+<div class="hg-keybar">
+  <div class="hg-keybar-in">
+    <label for="hgkey"><b>API kalitingiz</b> <span>— so'rovlarni shu sahifadan sinab ko'rish uchun</span></label>
+    <div class="hg-keyrow"><input id="hgkey" type="password" placeholder="hg_xxxxxxxxxx_xxxxxxxx" autocomplete="off"><button id="hgkeybtn" type="button">Ulash</button></div>
+    <div id="hgkeymsg" class="hg-keymsg"></div>
+  </div>
+</div>
+<div id="swagger-ui"></div>
+<footer class="hg-foot" id="pfoot"></footer>
+<script src="/static/swagger/swagger-ui-bundle.js"></script>
+<script src="/static/docs.js"></script>
+<script src="/static/brand.js"></script>
+</body>
+</html>

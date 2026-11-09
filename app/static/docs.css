@@ -1,0 +1,27 @@
+/* SPDX-License-Identifier: Apache-2.0
+ * Copyright (c) 2026 Azimjon Makhkamov */
+body { margin: 0; background: #fafafa; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+.hg-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 20px; background: #1b1b1b; color: #fff; position: sticky; top: 0; z-index: 10; flex-wrap: wrap; }
+.hg-brand { display: flex; align-items: center; gap: 10px; font-weight: 600; }
+.hg-brand small { display: block; font-weight: 400; font-size: 12px; color: #bbb; }
+.hg-logo { background: #2a78d6; color: #fff; border-radius: 7px; padding: 5px 8px; font-size: 12px; font-weight: 700; }
+.hg-actions { display: flex; align-items: center; gap: 12px; }
+.hg-kp { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 12px; color: #ccc; }
+.hg-actions button { background: transparent; color: #fff; border: 1px solid #555; border-radius: 6px; padding: 6px 14px; cursor: pointer; font: inherit; }
+.hg-actions button:hover { background: #333; }
+.swagger-ui .topbar { display: none; }
+.swagger-ui .info { margin: 30px 0 20px; }
+.swagger-ui .info .title small.version-stamp { background: #2a78d6; }
+.swagger-ui .scheme-container { box-shadow: none; border-bottom: 1px solid #e5e5e5; }
+@media (max-width: 600px) { .hg-kp { display: none; } .swagger-ui .wrapper { padding: 0 10px; } }
+.hg-foot { text-align: center; padding: 20px 16px 28px; font-size: 12px; color: #888; }
+.hg-foot a { color: inherit; }
+.hg-keybar { background: #eef5fd; border-bottom: 1px solid #d6e6f9; }
+.hg-keybar-in { max-width: 1460px; margin: 0 auto; padding: 12px 20px; }
+.hg-keybar label { display: block; font-size: 14px; margin-bottom: 6px; color: #1b1b1b; }
+.hg-keybar label span { color: #666; font-weight: 400; }
+.hg-keyrow { display: flex; gap: 8px; max-width: 620px; }
+.hg-keyrow input { flex: 1; padding: 8px 10px; border: 1px solid #b9cfe9; border-radius: 6px; font: 14px ui-monospace, Menlo, Consolas, monospace; }
+.hg-keyrow button { background: #2a78d6; color: #fff; border: 0; border-radius: 6px; padding: 8px 18px; cursor: pointer; font: inherit; font-weight: 600; }
+.hg-keymsg { font-size: 13px; margin-top: 6px; min-height: 1em; }
+.hg-keymsg.ok { color: #0b7a0b; } .hg-keymsg.bad { color: #c62828; }

@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "HEMIS API Gateway"
+abstract: "Secure, filtered API gateway and control panel for the HEMIS university information system."
+type: software
+authors:
+  - family-names: "Makhkamov"
+    given-names: "Azimjon"
+    email: "raqamlivodiy@gmail.com"
+version: "1.0.0"
+date-released: "2026-11-09"
+license: Apache-2.0
+keywords: ["HEMIS", "API gateway", "higher education", "Uzbekistan", "FastAPI", "access control"]

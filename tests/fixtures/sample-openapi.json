@@ -1,0 +1,865 @@
+{
+ "openapi": "3.0.0",
+ "info": {
+  "title": "Sample API for tests",
+  "version": "0.1",
+  "description": "Synthetic minimal OpenAPI document used only by automated tests. Not a HEMIS document."
+ },
+ "servers": [
+  {
+   "url": "http://hemis/rest/"
+  }
+ ],
+ "tags": [
+  {
+   "name": "1. Backend API"
+  },
+  {
+   "name": "2. Public API"
+  },
+  {
+   "name": "3. Student API"
+  },
+  {
+   "name": "Reklama"
+  },
+  {
+   "name": "5. Fast API"
+  }
+ ],
+ "paths": {
+  "/v1/data/student-list": {
+   "get": {
+    "tags": [
+     "1. Backend API"
+    ],
+    "summary": "Talabalar ro'yxati",
+    "parameters": [
+     {
+      "name": "page",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "type": "string"
+      },
+      "description": "page"
+     },
+     {
+      "name": "limit",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "type": "string"
+      },
+      "description": "limit"
+     },
+     {
+      "name": "_education_form",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "type": "string"
+      },
+      "description": "_education_form"
+     },
+     {
+      "name": "_education_type",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "type": "string"
+      },
+      "description": "_education_type"
+     },
+     {
+      "name": "_payment_form",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "type": "string"
+      },
+      "description": "_payment_form"
+     },
+     {
+      "name": "_department",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "type": "string"
+      },
+      "description": "_department"
+     },
+     {
+      "name": "_group",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "type": "string"
+      },
+      "description": "_group"
+     },
+     {
+      "name": "_specialty",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "type": "string"
+      },
+      "description": "_specialty"
+     },
+     {
+      "name": "_curriculum",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "type": "string"
+      },
+      "description": "_curriculum"
+     },
+     {
+      "name": "_level",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "type": "string"
+      },
+      "description": "_level"
+     },
+     {
+      "name": "_semester",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "type": "string"
+      },
+      "description": "_semester"
+     },
+     {
+      "name": "_gender",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "type": "string"
+      },
+      "description": "_gender"
+     },
+     {
+      "name": "search",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "type": "string"
+      },
+      "description": "search"
+     },
+     {
+      "name": "passport_pin",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "type": "string"
+      },
+      "description": "passport_pin"
+     },
+     {
+      "name": "passport_number",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "type": "string"
+      },
+      "description": "passport_number"
+     },
+     {
+      "name": "updated_at_from",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "type": "string"
+      },
+      "description": "updated_at_from"
+     },
+     {
+      "name": "updated_at_to",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "type": "string"
+      },
+      "description": "updated_at_to"
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "OK"
+     }
+    },
+    "security": [
+     {
+      "bearerAuth": []
+     }
+    ]
+   }
+  },
+  "/v1/data/student-stats": {
+   "get": {
+    "tags": [
+     "1. Backend API"
+    ],
+    "summary": "Talabalar statistikasi",
+    "parameters": [
+     {
+      "name": "group_by",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "type": "string"
+      },
+      "description": "group_by"
+     },
+     {
+      "name": "_education_year",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "type": "string"
+      },
+      "description": "_education_year"
+     },
+     {
+      "name": "_department",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "type": "string"
+      },
+      "description": "_department"
+     },
+     {
+      "name": "_education_type",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "type": "string"
+      },
+      "description": "_education_type"
+     },
+     {
+      "name": "_education_form",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "type": "string"
+      },
+      "description": "_education_form"
+     },
+     {
+      "name": "_level",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "type": "string"
+      },
+      "description": "_level"
+     },
+     {
+      "name": "_specialty",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "type": "string"
+      },
+      "description": "_specialty"
+     },
+     {
+      "name": "_payment_form",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "type": "string"
+      },
+      "description": "_payment_form"
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "OK"
+     }
+    },
+    "security": [
+     {
+      "bearerAuth": []
+     }
+    ]
+   }
+  },
+  "/v1/data/employee-stats": {
+   "get": {
+    "tags": [
+     "1. Backend API"
+    ],
+    "summary": "Xodimlar statistikasi",
+    "parameters": [
+     {
+      "name": "group_by",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "type": "string"
+      },
+      "description": "group_by"
+     },
+     {
+      "name": "_employee_type",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "type": "string"
+      },
+      "description": "_employee_type"
+     },
+     {
+      "name": "_department",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "type": "string"
+      },
+      "description": "_department"
+     },
+     {
+      "name": "_position",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "type": "string"
+      },
+      "description": "_position"
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "OK"
+     }
+    },
+    "security": [
+     {
+      "bearerAuth": []
+     }
+    ]
+   }
+  },
+  "/v1/data/student-info": {
+   "get": {
+    "tags": [
+     "1. Backend API"
+    ],
+    "summary": "Talaba ma'lumoti",
+    "parameters": [
+     {
+      "name": "student_id_number",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "type": "string"
+      },
+      "description": "student_id_number"
+     },
+     {
+      "name": "student_id",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "type": "string"
+      },
+      "description": "student_id"
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "OK"
+     }
+    },
+    "security": [
+     {
+      "bearerAuth": []
+     }
+    ]
+   }
+  },
+  "/v1/data/schedule-list": {
+   "get": {
+    "tags": [
+     "1. Backend API"
+    ],
+    "summary": "Dars jadvali",
+    "parameters": [
+     {
+      "name": "page",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "type": "string"
+      },
+      "description": "page"
+     },
+     {
+      "name": "limit",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "type": "string"
+      },
+      "description": "limit"
+     },
+     {
+      "name": "_faculty",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "type": "string"
+      },
+      "description": "_faculty"
+     },
+     {
+      "name": "_group",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "type": "string"
+      },
+      "description": "_group"
+     },
+     {
+      "name": "_semester",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "type": "string"
+      },
+      "description": "_semester"
+     },
+     {
+      "name": "_education_year",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "type": "string"
+      },
+      "description": "_education_year"
+     },
+     {
+      "name": "lesson_date_from",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "type": "string"
+      },
+      "description": "lesson_date_from"
+     },
+     {
+      "name": "lesson_date_to",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "type": "string"
+      },
+      "description": "lesson_date_to"
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "OK"
+     }
+    },
+    "security": [
+     {
+      "bearerAuth": []
+     }
+    ]
+   }
+  },
+  "/v1/data/department-list": {
+   "get": {
+    "tags": [
+     "1. Backend API"
+    ],
+    "summary": "Bo'limlar",
+    "parameters": [
+     {
+      "name": "page",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "type": "string"
+      },
+      "description": "page"
+     },
+     {
+      "name": "limit",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "type": "string"
+      },
+      "description": "limit"
+     },
+     {
+      "name": "_structure_type",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "type": "string"
+      },
+      "description": "_structure_type"
+     },
+     {
+      "name": "parent",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "type": "string"
+      },
+      "description": "parent"
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "OK"
+     }
+    },
+    "security": [
+     {
+      "bearerAuth": []
+     }
+    ]
+   }
+  },
+  "/v1/data/attendance-stat": {
+   "get": {
+    "tags": [
+     "1. Backend API"
+    ],
+    "summary": "Davomat statistikasi",
+    "parameters": [
+     {
+      "name": "page",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "type": "string"
+      },
+      "description": "page"
+     },
+     {
+      "name": "limit",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "type": "string"
+      },
+      "description": "limit"
+     },
+     {
+      "name": "group_by",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "type": "string"
+      },
+      "description": "group_by"
+     },
+     {
+      "name": "_group",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "type": "string"
+      },
+      "description": "_group"
+     },
+     {
+      "name": "_department",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "type": "string"
+      },
+      "description": "_department"
+     },
+     {
+      "name": "date_from",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "type": "string"
+      },
+      "description": "date_from"
+     },
+     {
+      "name": "date_to",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "type": "string"
+      },
+      "description": "date_to"
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "OK"
+     }
+    },
+    "security": [
+     {
+      "bearerAuth": []
+     }
+    ]
+   }
+  },
+  "/v1/data/student-debtor-count": {
+   "get": {
+    "tags": [
+     "1. Backend API"
+    ],
+    "summary": "Qarzdorlar soni",
+    "parameters": [
+     {
+      "name": "education_year",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "type": "string"
+      },
+      "description": "education_year"
+     },
+     {
+      "name": "faculty_id",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "type": "string"
+      },
+      "description": "faculty_id"
+     },
+     {
+      "name": "group_id",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "type": "string"
+      },
+      "description": "group_id"
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "OK"
+     }
+    },
+    "security": [
+     {
+      "bearerAuth": []
+     }
+    ]
+   }
+  },
+  "/v1/data/version-info": {
+   "get": {
+    "tags": [
+     "1. Backend API"
+    ],
+    "summary": "Tizim versiyasi",
+    "parameters": [],
+    "responses": {
+     "200": {
+      "description": "OK"
+     }
+    }
+   }
+  },
+  "/v1/data/system-log-list": {
+   "get": {
+    "tags": [
+     "1. Backend API"
+    ],
+    "summary": "Tizim jurnali",
+    "parameters": [
+     {
+      "name": "page",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "type": "string"
+      },
+      "description": "page"
+     },
+     {
+      "name": "limit",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "type": "string"
+      },
+      "description": "limit"
+     },
+     {
+      "name": "action",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "type": "string"
+      },
+      "description": "action"
+     },
+     {
+      "name": "ip",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "type": "string"
+      },
+      "description": "ip"
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "OK"
+     }
+    },
+    "security": [
+     {
+      "bearerAuth": []
+     }
+    ]
+   }
+  },
+  "/v1/public/stat-student": {
+   "get": {
+    "tags": [
+     "2. Public API"
+    ],
+    "summary": "Ochiq statistika",
+    "parameters": [],
+    "responses": {
+     "200": {
+      "description": "OK"
+     }
+    }
+   }
+  },
+  "/v1/account/me": {
+   "get": {
+    "tags": [
+     "3. Student API"
+    ],
+    "summary": "Talaba profili",
+    "parameters": [],
+    "responses": {
+     "200": {
+      "description": "OK"
+     }
+    },
+    "security": [
+     {
+      "bearerAuth": []
+     }
+    ]
+   }
+  },
+  "/v1/auth/login": {
+   "post": {
+    "tags": [
+     "3. Student API"
+    ],
+    "summary": "Talaba login",
+    "parameters": [],
+    "responses": {
+     "200": {
+      "description": "OK"
+     }
+    },
+    "requestBody": {
+     "content": {
+      "application/json": {
+       "schema": {
+        "type": "object"
+       }
+      }
+     }
+    }
+   }
+  },
+  "/v1/rekmarkaz/serving/stories/{id}": {
+   "get": {
+    "tags": [
+     "Reklama"
+    ],
+    "summary": "Story",
+    "parameters": [
+     {
+      "name": "id",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "integer"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "OK"
+     }
+    },
+    "security": [
+     {
+      "bearerAuth": []
+     }
+    ]
+   }
+  },
+  "/student-gpa-summary": {
+   "post": {
+    "tags": [
+     "5. Fast API"
+    ],
+    "summary": "GPA summary",
+    "parameters": [
+     {
+      "name": "token",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "type": "string"
+      },
+      "description": "token"
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "OK"
+     }
+    },
+    "requestBody": {
+     "content": {
+      "application/json": {
+       "schema": {
+        "type": "object"
+       }
+      }
+     }
+    }
+   }
+  }
+ },
+ "components": {
+  "schemas": {},
+  "securitySchemes": {
+   "bearerAuth": {
+    "type": "http",
+    "scheme": "bearer"
+   }
+  }
+ }
+}

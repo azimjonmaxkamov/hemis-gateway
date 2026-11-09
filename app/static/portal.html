@@ -1,0 +1,42 @@
+<!doctype html>
+<!-- SPDX-License-Identifier: Apache-2.0 · Copyright (c) 2026 Azimjon Makhkamov -->
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HEMIS API Gateway — Dasturchilar uchun</title>
+<link rel="stylesheet" href="/static/admin.css">
+</head>
+<body>
+<div class="main" style="max-width:1080px;margin:0 auto">
+  <div class="topbar"><div class="brand" style="padding:0"><span id="blogo"><div class="logo">HG</div></span><div><span id="bshort">HEMIS</span> API Gateway<small id="bname">Dasturchilar uchun</small></div></div><div class="row"><a class="btn" href="/docs">API hujjatlari (Swagger)</a><a class="btn" href="/admin">Boshqaruv paneli</a></div></div>
+  <div class="grid g2">
+    <div class="card">
+      <h1>Ulanish</h1>
+      <p class="sub">OTM HEMIS ma'lumotlariga tashqi tizimlar faqat shu gateway orqali, berilgan ruxsat doirasida ulanadi.</p>
+      <h3>Asosiy manzil</h3>
+      <pre class="json" id="base"></pre>
+      <h3 class="mt">Kalit yuborish</h3>
+      <pre class="json">X-Gateway-Key: hg_xxxxxxxxxx_xxxxxxxx</pre>
+      <p class="small">Backend API endpointlari uchun HEMIS dagi kabi <span class="mono">Authorization: Bearer hg_…</span> ham ishlaydi. Talaba/Tutor API da esa <span class="mono">Authorization</span> ga talaba tokeni, kalit esa <span class="mono">X-Gateway-Key</span> ga yoziladi.</p>
+      <h3 class="mt">Misol</h3>
+      <pre class="json" id="ex"></pre>
+    </div>
+    <div class="card">
+      <h2>Mening ruxsatlarim</h2>
+      <p class="small muted">Kalitingizni kiriting — sizga ochilgan endpointlar va filtrlar ro'yxati ko'rsatiladi. Kalit hech qayerda saqlanmaydi.</p>
+      <form id="kform" class="row"><input id="key" type="password" placeholder="hg_…" style="flex:1" autocomplete="off"><button class="primary">Ko'rish</button></form>
+      <div id="info" class="mt"></div>
+      <h3 class="mt">Xato kodlari</h3>
+      <table class="small"><tr><td class="mono">401</td><td>kalit yo'q yoki noto'g'ri</td></tr><tr><td class="mono">403</td><td>endpoint, filtr yoki qiymatga ruxsat yo'q (<span class="mono">gateway_code</span> maydonida sababi)</td></tr><tr><td class="mono">429</td><td>limit yoki kvota tugadi (<span class="mono">Retry-After</span>)</td></tr><tr><td class="mono">502/503/504</td><td>HEMIS bilan muammo, keyinroq qayta urining</td></tr></table>
+    </div>
+  </div>
+  <div id="eps" class="mt"></div>
+</div>
+<div class="page-foot" id="pfoot"></div>
+<div class="tip" id="tip"></div>
+<script src="/static/charts.js"></script>
+<script src="/static/portal.js"></script>
+<script src="/static/brand.js"></script>
+</body>
+</html>
